@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-image: url("pcu-campus.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+
+/* Dark layer over image */
+.background-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 30, 65, 0.48);
+
+    z-index: -1;
+}
+
+
+/* Main Container */
+.main-container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+
+/* White Form Card */
+.form-card {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* Header */
+.form-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+/* PCU Logo */
+.pcu-logo {
+
+    width: 75px;
+    height: 75px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #0757b8,
+        #168bd1
+    );
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(0, 80, 160, 0.3);
+}
+
+
+.form-header h1 {
+
+    margin-top: 18px;
+
+    color: #12345b;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+
+.form-header p {
+
+    margin-top: 7px;
+
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+/* Form Groups */
+.form-group {
+
+    margin-bottom: 22px;
+}
+
+
+.form-group > label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #20324d;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* Inputs */
+.form-control {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    padding: 10px 14px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-control:focus {
+
+    border-color: #0878d1;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 120, 209, 0.12);
+}
+
+
+/* Gender */
+.gender-box {
+
+    min-height: 48px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 0 15px;
+
+    background: white;
+}
+
+
+.gender-box label {
+
+    margin: 0;
+
+    color: #344054;
+
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+
+.gender-box input {
+
+    margin-right: 6px;
+}
+
+
+/* Password */
+.password-box {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.password-box .form-control {
+
+    flex: 1;
+}
+
+
+#togglePassword {
+
+    border: none;
+
+    padding: 0 18px;
+
+    border-radius: 10px;
+
+    background: #e8f1fb;
+
+    color: #0757b8;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Password Strength */
+.strength {
+
+    width: 100%;
+
+    height: 7px;
+
+    margin-top: 9px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+#strengthBar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #16a34a;
+
+    transition: 0.3s;
+}
+
+
+#strengthText {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+/* Error */
+.error {
+
+    display: block;
+
+    min-height: 18px;
+
+    margin-top: 4px;
+
+    color: #dc3545;
+
+    font-size: 13px;
+}
+
+
+/* Terms */
+.terms-area {
+
+    margin-bottom: 25px;
+}
+
+
+.terms-area label {
+
+    color: #344054;
+
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+
+.terms-area input {
+
+    margin-right: 8px;
+}
+
+
+/* Button */
+.register-btn {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #0757b8,
+        #087fd3
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.register-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(7, 87, 184, 0.30);
+}
+
+
+/* Success Message */
+.success-message {
+
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #d1e7dd;
+
+    color: #0f5132;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+/* Footer */
+.footer {
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .main-container {
+
+        padding: 25px 15px;
+    }
+
+
+    .form-card {
+
+        padding: 28px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .form-header h1 {
+
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .password-box {
+
+        flex-direction: column;
+    }
+
+
+    #togglePassword {
+
+        min-height: 45px;
+    }
+
+
+    .gender-box {
+
+        gap: 15px;
+    }
+}
